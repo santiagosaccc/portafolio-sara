@@ -29,12 +29,13 @@ nav{
     background: #294674;
 }
 .ham{
-    /*display: none;*/
+    display: none;
+    background-color:transparent ;
     cursor: pointer;
     border:none;
     margin: 0;
     padding: 0;
-    background-color:transparent ;
+    
 }
 
 .ham span{
@@ -45,3 +46,124 @@ nav{
     margin: 10px auto;
     border-radius: 2px;
 }
+
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+
+}
+
+.enlaces-menu li{
+    padding: 0 30px;
+    list-style-type: none;
+    transition: 0.3s;
+
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size:  1.8rem;
+    color: white;
+}
+
+.enlaces-menu li:hover{
+    background-color: turquoise;
+}
+
+/*dispocitivos moviles*/
+@media(max-width: 768px){
+
+    body{
+        overflow: hidden;
+    }
+    .logo{
+        padding-left:25px ;
+
+
+    }
+
+    .ham{
+        display: block;
+        position: absolute;
+        right: 25px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding:25px 0;
+    }
+
+    .enlaces-menu{
+        
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height: 92vh;         
+        margin:0;
+        padding:0; 
+        display:none;
+        opacity:0;
+        transition: opacity 5s ease-out;
+        width:100%;
+    
+       
+    }
+    .enlaces-menu li{
+      text-align:center;
+      width:100%;
+      padding:20px;    
+  }
+
+}
+
+/* Animaciones */
+
+@keyframes muestraMenu {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.enlaces-menu.activado{
+    display:flex; 
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado{
+  opacity: 0;
+}
+.br-3.animado{
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.girar:hover{
+   transform:rotate(360deg);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
