@@ -19,6 +19,11 @@ margin: 0;
     border-radius: 4px;
     transition: transform 0.3s aese-in-out;
     border: solid 1px rgb(255, 255, 255);
+
+    /*imagenes y control*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .grid-item:hover{
@@ -30,5 +35,24 @@ margin: 0;
     display: grid;
     /*noscrea nuvaas clomubnas y nos controla*/
     grid-template-columns:repeat(auto-fill,minmax(240px , 1fr) ) ;
+    grid-auto-rows:minmax(200px,auto);
+    /*gap nospone la sepacion en los elemoentos*/
+    gap:20px;
+    padding: 20px;
+    grid-auto-flow: dense;
 
 }
+@media(min-width:600px){
+    .wide{
+        grid-column: span 2;
+    
+    }
+    
+    .tall{
+        grid-row : span 2;
+    }
+}
+
+
+/*sisitema de control de largar una columna o mas ponemos el item de la colubna y usamos pro
+piedad grid-colum : 1/ -1; nos dara toda la colubna y seguir las lineas*/
