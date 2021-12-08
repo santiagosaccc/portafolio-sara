@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/grid-gallery.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Galeria</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="">
+                <img class="logo" src="" alt="logo">
+            </a>
+
+            <ul class="enlaces-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="public/galeria.html">Galeria</a></li>
+                <li><a href="#">contactanos</a></li>
+                <li><a href="#">contactanos</a></li>
+
+            </ul>
+            <button class="ham" type="button">
+
+
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+
+            </button>
+        </nav>
+    </header>
+
+
+<div class="galerias">
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+    <script>
+    const ham = document.querySelector('.ham');
+const enlaces = document.querySelector('.enlaces-menu');
+const barras = document.querySelectorAll('.ham span');
+
+
+
+ham.addEventListener('click', () => {
+    enlaces.classList.toggle('activado');
+    barras.forEach(child => {child.classList.toggle('animado')});
+    ham.classList.toggle('girar');
+});</script>
+</body>
+</html>
